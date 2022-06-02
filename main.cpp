@@ -13,7 +13,6 @@ void initialize()
 
 void opcontrol()
 {
-    int time = 0;
     int speed = 0;
 
     bool first = true;
@@ -34,5 +33,7 @@ void opcontrol()
             }
         }
         else { first = true; }
+        
+        delay(5);
     }
 } 
