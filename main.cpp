@@ -22,14 +22,14 @@ void opcontrol()
         mtr.move(speed);
         
         pros::lcd::print(0, "%d: %lf", speed, mtr.get_actual_velocity());
-        pros::lcd::print(1, "%d: %lf", mtr.get_target_velocity());
+        pros::lcd::print(1, "%lf", mtr.get_target_velocity());
         
         if(con.get_digital(E_CONTROLLER_DIGITAL_A))
         {
             if(first == true)
             {
                 first = false;
-                speed += 5;
+                speed += 1;
             }
         }
         else { first = true; }
